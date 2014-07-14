@@ -1,0 +1,99 @@
+1.hostname
+gives the name of host
+webonise@webonise-desktop:~$ hostname
+webonise-desktop
+
+2.uname -a
+gives type and version of os
+webonise@webonise-desktop:~$ uname -a
+Linux webonise-desktop 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+3.pwd
+gives full path of home directory
+webonise@webonise-desktop:~$ pwd
+/home/webonise
+
+
+4.groups
+webonise@webonise-desktop:~$ groups
+webonise adm cdrom sudo dip plugdev lpadmin sambashare
+
+5.date
+webonise@webonise-desktop:~$ date
+Mon Jul 14 19:25:00 IST 2014
+
+6.ls -a
+lists directories and subdirectories
+webonise@webonise-desktop:~$ ls -a
+.                           .goutputstream-2MLUHX  .gtk-bookmarks
+..                          .goutputstream-5YPEIX  .gvfs
+assignment                  .goutputstream-7PAIIX  .ICEauthority
+assignment1                 .goutputstream-9R3DFX  .kde
+assignment1.log             .goutputstream-9UYXEX  .local
+assignment.log              .goutputstream-A6JXHX  .mission-control
+.bash_history               .goutputstream-B5WEGX  .mongorc.js
+.bash_logout                .goutputstream-B7LSGX  .mozilla
+.bashrc                     .goutputstream-BRFYFX  Music
+.cache                      .goutputstream-C6A4HX  .mysql
+.compiz-1                   .goutputstream-C7MAGX  .mysql_history
+.config                     .goutputstream-EOTDEX  Pictures
+.dbshell                    .goutputstream-GCSBIX  .pki
+.dbus                       .goutputstream-HBORIX  .profile
+DemoScript_NewsRiver.1.txt  .goutputstream-I923EX  Public
+DemoScript_NewsRiver.txt    .goutputstream-IQW0GX  .pulse
+Desktop                     .goutputstream-JLZKHX  .pulse-cookie
+.dmrc                       .goutputstream-LQB2DX  .shutter
+Documents                   .goutputstream-MDETGX  .Skype
+Downloads                   .goutputstream-MSCSEX  skype.deb
+.dropbox                    .goutputstream-NBSFFX  .ssh
+Dropbox                     .goutputstream-OLMKFX  Templates
+.dropbox-dist               .goutputstream-P4JNGX  test.cpp
+.dropbox-master             .goutputstream-PB28GX  .thumbnails
+examples.desktop            .goutputstream-QVUFHX  .thunderbird
+.fontconfig                 .goutputstream-R0A2EX  Ubuntu One
+.gconf                      .goutputstream-RPQYFX  Videos
+.gegl-0.0                   .goutputstream-T42MGX  .VirtualBox
+.gimp-2.6                   .goutputstream-VJHWFX  VirtualBox VMs
+git-1.8.1.2                 .goutputstream-VTINIX  win7
+git-1.8.1.2.tar.gz          .goutputstream-X7OLIX  .Xauthority
+.gitconfig                  .goutputstream-Y4G8HX  .xpaint
+.gnome2                     .goutputstream-Z39ZGX  .xsession-errors
+.gnome2_private             .gstreamer-0.10        .xsession-errors.old
+
+7.webonise@webonise-desktop:~$ cd assignment1
+webonise@webonise-desktop:~/assignment1$ hostname>>assignment.log
+webonise@webonise-desktop:~/assignment1$ ls -a>>assignment.log
+webonise@webonise-desktop:~/assignment1$ uname -a>>assignment.log
+webonise@webonise-desktop:~/assignment1$ pwd>>assignment.log
+webonise@webonise-desktop:~/assignment1$ groups>>assignment.log
+webonise@webonise-desktop:~/assignment1$ date>>assignment.log
+
+
+8.webonise@webonise-desktop:~/assignment1$ bash rename.sh
+renamed_hello.txt renamed_hi.txt
+webonise@webonise-desktop:~/assignment1$ bash rename.sh>>assignment.log
+
+9.webonise@webonise-desktop:~/assignment1$ bash renamex.sh
+webonise@webonise-desktop:~/assignment1$ bash renamex.sh>>assignment.log
+
+10.webonise@webonise-desktop:~/assignment1$ mkdir print_html
+webonise@webonise-desktop:~/assignment1$ mv rename.sh print_html
+webonise@webonise-desktop:~/assignment1$ mv renamex.sh print_html
+webonise@webonise-desktop:~/assignment1$ mv commands.sh print_html
+webonise@webonise-desktop:~/assignment1/print_html$ >readMe.txt
+webonise@webonise-desktop:~/assignment1/print_html$ cat>readMe.txt
+hi
+
+webonise@webonise-desktop:~/assignment1/print_html$ chmod 777 readMe.txt
+webonise@webonise-desktop:~/assignment1/print_html$ ls -l
+total 16
+-rw-rw-r-- 1 webonise webonise  3 Jul 14 19:39 commands.sh
+-rwxrwxrwx 1 webonise webonise  4 Jul 14 19:45 readMe.txt
+-rw-rw-r-- 1 webonise webonise 87 Jul 14 19:27 rename.sh
+-rw-rw-r-- 1 webonise webonise 72 Jul 14 19:26 renamex.sh
+
+
+
+
+
+
