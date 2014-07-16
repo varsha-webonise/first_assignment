@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <title>graph</title>
+    <meta charset = "UTF-8" />
+    </head>
+    <body>
+    <h1>GRAPH</h1>
+    <form>
+      <fieldset>
+        <legend>Text input</legend>
+        <p>
+          <label>INPUT</label>
+          <input type = "text"
+                 id = "id"></br>
+         <label>start</label>
+          <input type = "text"
+                 id = "id1"></br>
+        <label>end</label>
+          <input type = "text"
+                 id = "id2"></br>
+           <label>steps</label>
+          <input type = "text"
+                 id = "id3"></br>
+        </p>
+
+       <script>
+       function parse()
+       {
+    
+           var a=document.getElementById("id").value;
+           var start=document.getElementById("id1").value;
+           var end=document.getElementById("id2").value;
+    
+           var j=0;
+           var xc=0;
+           var yc=0;
+           var c=0;
+           var xa;
+           var ya;
+           var xb;
+           var yb;
+           while(a[j]!='x')
+           {
+               xc=xc+a[j];
+               j++;
+           }
+           if(a[j-1]==" ")
+           {
+               xc=1;
+           }
+           j++;
+           j++;
+           while(a[j]!='y')
+           {
+               yc=yc+a[j];
+               j++;
+           }
+           if(a[j-1]=='+')
+           {
+               yc=1;
+           }
+           j++;
+           j++;
+           while(a[j]<=a.length)
+           {
+              c=c+a[j];
+              j++;
+            }
+            alert("xcoeff is:"+xc);
+            alert("ycoeff is:"+yc);
+            alert("constant is:"+c);
+            xa=start;
+            xb=end;
+            ya=(c-(xc*xa))/yc;
+            yb=(c-(xc*xb))/yc;
+            alert(xa);
+            alert(ya);
+            alert(xb);
+            alert(yb);
+            getgraph(xa,ya,xb,yb,xc,yc,c);
+  }
+
+  function getgraph(xa,ya,xb,yb,xc,yc,c)
+  {        
+           var steps=document.getElementById("id3").value;
+           var c=document.getElementById("myCanvas");
+           var ctx=c.getContext("2d");
+           ctx.translate(0,myCanvas.height);
+           ctx.scale(5,-5);
+           ctx.beginPath();
+//ctx.linewidth="5"
+//ctx.strokeStyle="purple";  // Purple path
+                  ctx.moveTo(xa,ya);
+                  ctx.lineTo(xb,yb);            
+                  ctx.stroke();
+                  }
+                  </script>
+                  <FORM>
+                  <INPUT TYPE="button" Value="submit" onClick="parse()">
+                  </FORM>
+                  </fieldset>
+                  </form>
+                  <canvas id="myCanvas" width="400" height="400"  align="center" style="border:2px solid black;">
+                  Your browser does not support the HTML5 canvas tag.</canvas>
+                  </body>
+                  </html>
